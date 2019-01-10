@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Your Vue.js + TypeScript App"/>
+    <HelloWorld :msg="msg"/>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
 import HelloWorld from "./components/HelloWorld.vue";
 
 @Component({
@@ -13,5 +13,9 @@ import HelloWorld from "./components/HelloWorld.vue";
     HelloWorld
   }
 })
-export default class App extends Vue {}
+export class App extends Vue {
+  @Prop() private msg!: string;
+}
+Vue.component("app", App);
+export default App;
 </script>

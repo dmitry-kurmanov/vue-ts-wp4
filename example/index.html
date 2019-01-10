@@ -8,12 +8,17 @@
   </head>
 
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <app :msg='msg'/>
+    </div>
 
     <script>
-      new Vue({
-        render: h => h(Lib.App)
-      }).$mount("#app");
+      var app = new Vue({
+          el: '#app',
+          data: {
+            msg: "thin pig's home"
+          }
+      });
     </script>
   </body>
 </html>

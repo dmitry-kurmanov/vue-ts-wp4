@@ -8,7 +8,9 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class HelloWorld extends Vue {
+export class HelloWorld extends Vue {
   @Prop() private msg!: string;
 }
+Vue.component("hello-word", HelloWorld);
+export default HelloWorld;
 </script>

@@ -1,2 +1,1 @@
-import App from "./App.vue";
-export { App };
+export { App } from "./App.vue";
