@@ -3,12 +3,12 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 module.exports = {
   mode: "development",
   entry: {
-    lib: "./src/index.ts"
+    "survey.vue": "./src/entries/vue.ts"
   },
   output: {
     publicPath: "/",
     filename: "[name].js",
-    library: "Lib",
+    library: "Survey",
     libraryTarget: "umd",
     umdNamedDefine: true,
     globalObject: "this"
